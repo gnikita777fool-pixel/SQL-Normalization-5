@@ -1,7 +1,3 @@
-<img width="622" height="715" alt="image" src="https://github.com/user-attachments/assets/481774f4-52d8-43fb-a1ea-be2475bb762d" />Это задание требует от вас не только теоретических знаний по нормализации баз данных, но и практических навыков работы с инструментами разработчика (VS Code, Git Bash, Docker). 
-
-Ниже представлена подробная пошаговая инструкция, как выполнить эту лабораторную работу от начала до конца.
-
 ---
 
 ### Шаг 1. Подготовка окружения
@@ -94,6 +90,8 @@ CREATE TABLE Order_Items (
 <img width="589" height="663" alt="image" src="https://github.com/user-attachments/assets/9eec7f42-f9cb-43fb-b121-a08034df1de4" />
 
 <img width="530" height="1025" alt="image" src="https://github.com/user-attachments/assets/78dcb81f-9960-42fd-bf8e-48c7ab46602c" />
+
+<img width="622" height="715" alt="image" src="https://github.com/user-attachments/assets/481774f4-52d8-43fb-a1ea-be2475bb762d" />
 
 ### Шаг 5. Создание лога и дампа
 По условию: *"лог-файл должен содержать только ваши действия"*. Это значит, что в логе не должно быть вывода консоли (таблиц, сообщений "Query OK"), **только сам SQL-код**, который вы вводили.
