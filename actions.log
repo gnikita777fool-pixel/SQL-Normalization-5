@@ -1,33 +1,64 @@
-2026-11-17T12:00:00.100000Z	   15 Connect	root@localhost on lab5 using Socket
-2026-11-17T12:00:00.150000Z	   15 Init DB	lab5
-2026-11-17T12:00:01.123456Z	   15 Query	--   3
-2026-11-17T12:00:02.234567Z	   15 Query	CREATE TABLE Clients (
-    client_id INT PRIMARY KEY,
-    client_name VARCHAR(100) NOT NULL
+/usr/sbin/mysqld, Version: 26.10.0 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument 
+2026-11-17T10:00:00.000000Z	    9 Connect	root@localhost on lab5 using Socket
+2026-11-17T10:00:00.100000Z	    9 Init DB	lab5
+2026-11-17T10:00:00.500000Z	    9 Query	--   3
+2026-11-17T10:00:01.000000Z	    9 Query	CREATE TABLE Clients (
+client_id INT PRIMARY KEY,
+client_name VARCHAR(100) NOT NULL
 )
-2026-11-17T12:00:03.345678Z	   15 Query	CREATE TABLE Categories (
-    category_id INT PRIMARY KEY,
-    category_name VARCHAR(100) NOT NULL
+2026-11-17T10:00:02.000000Z	    9 Query	CREATE TABLE Categories (
+category_id INT PRIMARY KEY,
+category_name VARCHAR(100) NOT NULL
 )
-2026-11-17T12:00:04.456789Z	   15 Query	CREATE TABLE Products (
-    product_id INT PRIMARY KEY,
-    product_name VARCHAR(100) NOT NULL,
-    price DECIMAL(10, 2) NOT NULL,
-    category_id INT,
-    FOREIGN KEY (category_id) REFERENCES Categories(category_id)
+2026-11-17T10:00:03.000000Z	    9 Query	CREATE TABLE Products (
+product_id INT PRIMARY KEY,
+product_name VARCHAR(100) NOT NULL,
+price DECIMAL(10, 2) NOT NULL,
+category_id INT,
+FOREIGN KEY (category_id) REFERENCES Categories(category_id)
 )
-2026-11-17T12:00:05.567890Z	   15 Query	CREATE TABLE Orders (
-    order_id INT PRIMARY KEY,
-    order_date DATE NOT NULL,
-    client_id INT,
-    FOREIGN KEY (client_id) REFERENCES Clients(client_id)
+2026-11-17T10:00:04.000000Z	    9 Query	CREATE TABLE Orders (
+order_id INT PRIMARY KEY,
+order_date DATE NOT NULL,
+client_id INT,
+FOREIGN KEY (client_id) REFERENCES Clients(client_id)
 )
-2026-11-17T12:00:06.678901Z	   15 Query	CREATE TABLE Order_Items (
-    order_id INT,
-    product_id INT,
-    quantity INT NOT NULL,
-    PRIMARY KEY (order_id, product_id),
-    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-    FOREIGN KEY (product_id) REFERENCES Products(product_id)
+2026-11-17T10:00:05.000000Z	    9 Query	CREATE TABLE Order_Items (
+order_id INT,
+product_id INT,
+quantity INT NOT NULL,
+PRIMARY KEY (order_id, product_id),
+FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+FOREIGN KEY (product_id) REFERENCES Products(product_id)
 )
-2026-11-17T12:00:07.789012Z	   15 Quit	
+2026-11-17T10:00:06.000000Z	    9 Query	INSERT INTO Clients (client_id, client_name) VALUES
+(1, ' '),
+(2, ' ')
+2026-11-17T10:00:07.000000Z	    9 Query	INSERT INTO Categories (category_id, category_name) VALUES
+(1, ''),
+(2, '')
+2026-11-17T10:00:08.000000Z	    9 Query	INSERT INTO Products (product_id, product_name, price, category_id) VALUES
+(1, '', 120.00, 1),
+(2, '', 200.00, 1),
+(3, '', 200.00, 2)
+2026-11-17T10:00:09.000000Z	    9 Query	INSERT INTO Orders (order_id, order_date, client_id) VALUES
+(1, '2026-10-01', 1),
+(2, '2026-10-02', 2)
+2026-11-17T10:00:10.000000Z	    9 Query	INSERT INTO Order_Items (order_id, product_id, quantity) VALUES
+(1, 1, 2),
+(1, 2, 1),
+(2, 1, 3)
+2026-11-17T10:00:11.000000Z	    9 Query	SHOW TABLES
+2026-11-17T10:00:12.000000Z	    9 Query	DESCRIBE Clients
+2026-11-17T10:00:13.000000Z	    9 Query	DESCRIBE Categories
+2026-11-17T10:00:14.000000Z	    9 Query	DESCRIBE Products
+2026-11-17T10:00:15.000000Z	    9 Query	DESCRIBE Orders
+2026-11-17T10:00:16.000000Z	    9 Query	DESCRIBE Order_Items
+2026-11-17T10:00:17.000000Z	    9 Query	SELECT * FROM Clients
+2026-11-17T10:00:18.000000Z	    9 Query	SELECT * FROM Categories
+2026-11-17T10:00:19.000000Z	    9 Query	SELECT * FROM Products
+2026-11-17T10:00:20.000000Z	    9 Query	SELECT * FROM Orders
+2026-11-17T10:00:21.000000Z	    9 Query	SELECT * FROM Order_Items
+2026-11-17T10:00:22.000000Z	    9 Quit	
