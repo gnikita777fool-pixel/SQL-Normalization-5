@@ -1,4 +1,4 @@
-Это задание требует от вас не только теоретических знаний по нормализации баз данных, но и практических навыков работы с инструментами разработчика (VS Code, Git Bash, Docker). 
+<img width="622" height="715" alt="image" src="https://github.com/user-attachments/assets/481774f4-52d8-43fb-a1ea-be2475bb762d" />Это задание требует от вас не только теоретических знаний по нормализации баз данных, но и практических навыков работы с инструментами разработчика (VS Code, Git Bash, Docker). 
 
 Ниже представлена подробная пошаговая инструкция, как выполнить эту лабораторную работу от начала до конца.
 
@@ -85,7 +85,15 @@ CREATE TABLE Order_Items (
     FOREIGN KEY (product_id) REFERENCES Products(product_id)
 );
 ```
-*(Примечание: если преподаватель требует строго русские названия полей, используйте их в бэктиках `` `Код заказа` ``, но в индустрии принято использовать английский транслит. Уточните этот момент, если сомневаетесь).*
+<img width="622" height="715" alt="image" src="https://github.com/user-attachments/assets/fe4625af-23d7-47cb-9a4b-3060673b3928" />
+
+<img width="611" height="610" alt="image" src="https://github.com/user-attachments/assets/2f87fa33-d309-402e-a456-528936b5ff14" />
+
+<img width="401" height="204" alt="image" src="https://github.com/user-attachments/assets/8ce7cb56-7a6e-4ca4-9a16-19e710b1af01" />
+
+<img width="589" height="663" alt="image" src="https://github.com/user-attachments/assets/9eec7f42-f9cb-43fb-b121-a08034df1de4" />
+
+<img width="530" height="1025" alt="image" src="https://github.com/user-attachments/assets/78dcb81f-9960-42fd-bf8e-48c7ab46602c" />
 
 ### Шаг 5. Создание лога и дампа
 По условию: *"лог-файл должен содержать только ваши действия"*. Это значит, что в логе не должно быть вывода консоли (таблиц, сообщений "Query OK"), **только сам SQL-код**, который вы вводили.
